@@ -1,0 +1,20 @@
+:root {
+    --my_primary: rgba(8, 59, 76, 1);
+    --my_light_primary: rgba(19, 137, 178, 1);
+    --my_warning: rgba(255, 209, 102, 1);
+    --my_success: rgba(12, 214, 161, 1);
+    --my_danger: rgba(240, 70, 111, 1);
+}
+
+body {
+    background-color: var(--my_primary);
+}
+
+#app_main h1 {
+    font-size: 4rem;
+}
+
+.square {
+    width: 10rem;
+    aspect-ratio: 1 / 1;
+}

@@ -13,21 +13,29 @@ per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”. */
 // per i multipli di 5 stampi “Buzz”
 // per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 
-const ulEl = document.querySelector('ul');
+const rowEl = document.querySelector('.row');
 
 for (let i = 1; i <= 100; i++) {
 
     if ((i % 3 == 0) && (i % 5 == 0)) {
-        let liEl = `<li> ${i} FizzBuzz </li>`;
-        ulEl.insertAdjacentHTML("beforeend", liEl);
+        let square = `<div class="square d-flex justify-content-center align-items-center bg-secondary-subtle">
+        <span>FizzBuzz</span>
+        </div>`;
+        rowEl.insertAdjacentHTML("beforeend", square);
     } else if (i % 3 == 0) {
-        let liEl = `<li> ${i} Fizz </li>`;
-        ulEl.insertAdjacentHTML("beforeend", liEl);
+        let square = `<div class="square d-flex justify-content-center align-items-center bg-secondary-subtle">
+        <span>Fizz</span>
+        </div>`;
+        rowEl.insertAdjacentHTML("beforeend", square);
     } else if (i % 5 == 0) {
-        let liEl = `<li> ${i} Buzz </li>`;
-        ulEl.insertAdjacentHTML("beforeend", liEl);
+        let square = `<div class="square d-flex justify-content-center align-items-center bg-secondary-subtle">
+        <span>Buzz</span>
+        </div>`;
+        rowEl.insertAdjacentHTML("beforeend", square);
     } else {
-        let liEl = `<li> ${i} </li>`;
-        ulEl.insertAdjacentHTML("beforeend", liEl);
+        let square = `<div class="square d-flex justify-content-center align-items-center bg-secondary-subtle">
+        <span>${i}</span>
+        </div>`;
+        rowEl.insertAdjacentHTML("beforeend", square);
     }
 };
