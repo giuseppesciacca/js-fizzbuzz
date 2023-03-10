@@ -1,3 +1,4 @@
+/* #region COMMON and Utilities */
 :root {
     --my_primary: rgba(8, 59, 76, 1);
     --my_light_primary: rgba(19, 137, 178, 1);
@@ -6,9 +7,27 @@
     --my_danger: rgba(240, 70, 111, 1);
 }
 
-body {
+.bg_my_primary {
     background-color: var(--my_primary);
 }
+
+.bg_my_light_primary {
+    background-color: var(--my_light_primary);
+}
+
+.bg_my_warning {
+    background-color: var(--my_warning);
+}
+
+.bg_my_success {
+    background-color: var(--my_success);
+}
+
+.bg_my_danger {
+    background-color: var(--my_danger);
+}
+
+/* #endregion COMMON and Utilities */
 
 #app_main h1 {
     font-size: 4rem;
