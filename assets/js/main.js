@@ -17,14 +17,14 @@ const ulEl = document.querySelector('ul');
 
 for (let i = 1; i <= 100; i++) {
 
-    if (i % 3 == 0) {
+    if ((i % 3 == 0) && (i % 5 == 0)) {
+        let liEl = `<li> ${i} FizzBuzz </li>`;
+        ulEl.insertAdjacentHTML("beforeend", liEl);
+    } else if (i % 3 == 0) {
         let liEl = `<li> ${i} Fizz </li>`;
         ulEl.insertAdjacentHTML("beforeend", liEl);
     } else if (i % 5 == 0) {
         let liEl = `<li> ${i} Buzz </li>`;
-        ulEl.insertAdjacentHTML("beforeend", liEl);
-    } else if (i % 3 == 0 && i % 5 == 0) {
-        let liEl = `<li> ${i} FizzBuzz </li>`;
         ulEl.insertAdjacentHTML("beforeend", liEl);
     } else {
         let liEl = `<li> ${i} </li>`;
