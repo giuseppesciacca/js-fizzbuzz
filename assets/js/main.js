@@ -12,26 +12,25 @@ per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”. */
 const rowEl = document.querySelector('.row');
 
 for (let i = 1; i <= 100; i++) {
+    //creo sia il div.square sia uno span all'interno
+    const square = document.createElement('div');
+    square.classList.add('square', 'd-flex', 'justify-content-center', 'align-items-center');
+    const spanEl = document.createElement('span');
+
+    //square base
+    square.classList.add('bg_my_light_primary');
+    spanEl.innerText = i;
 
     if ((i % 3 == 0) && (i % 5 == 0)) {
-        const square = `<div class="square d-flex justify-content-center align-items-center bg_my_danger">
-        <span>FizzBuzz</span>
-        </div>`;
-        rowEl.insertAdjacentHTML("beforeend", square);
+        square.classList.add('bg_my_danger');
+        spanEl.innerText = 'FizzBuzz';
     } else if (i % 3 == 0) {
-        const square = `<div class="square d-flex justify-content-center align-items-center bg_my_success">
-        <span>Fizz</span>
-        </div>`;
-        rowEl.insertAdjacentHTML("beforeend", square);
+        square.classList.add('bg_my_success');
+        spanEl.innerText = 'Fizz';
     } else if (i % 5 == 0) {
-        const square = `<div class="square d-flex justify-content-center align-items-center bg_my_warning">
-        <span>Buzz</span>
-        </div>`;
-        rowEl.insertAdjacentHTML("beforeend", square);
-    } else {
-        const square = `<div class="square d-flex justify-content-center align-items-center bg_my_light_primary">
-        <span>${i}</span>
-        </div>`;
-        rowEl.insertAdjacentHTML("beforeend", square);
-    }
+        square.classList.add('bg_my_warning');
+        spanEl.innerText = 'Buzz';
+    };
+    rowEl.insertAdjacentElement("beforeend", square);
+    square.insertAdjacentElement("beforeend", spanEl);
 };
